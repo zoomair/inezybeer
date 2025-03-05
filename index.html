@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+</html><!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
@@ -13,42 +13,6 @@
     <meta property="og:url" content="https://inezybeer.ru">
     <meta property="og:image" content="https://source.unsplash.com/1600x900/?beer">
     <link rel="canonical" href="https://inezybeer.ru">
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Inezybeer",
-        "url": "https://inezybeer.ru",
-        "logo": "https://source.unsplash.com/1600x900/?beer",
-        "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+7 999 123-45-67",
-            "contactType": "customer service",
-            "areaServed": "RU",
-            "availableLanguage": "Russian"
-        }
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Product",
-        "name": "Пиво Импорт",
-        "image": "https://source.unsplash.com/300x300/?beer",
-        "description": "Лучшие сорта пива из Европы",
-        "brand": "Inezybeer",
-        "offers": {
-            "@type": "Offer",
-            "priceCurrency": "RUB",
-            "price": "200",
-            "availability": "https://schema.org/InStock",
-            "seller": {
-                "@type": "Organization",
-                "name": "Inezybeer"
-            }
-        }
-    }
-    </script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -64,6 +28,68 @@
             text-align: center;
             font-size: 2em;
         }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .product {
+            border: 1px solid #ddd;
+            padding: 15px;
+            background-color: #fff;
+            border-radius: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .product:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+        }
+        .contact {
+            padding: 30px;
+            text-align: center;
+            background-color: #222;
+            color: white;
+            margin-top: 20px;
+        }
+        .form-container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: center;
+            margin-top: 20px;
+        }
+        .form-container input, .form-container textarea {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+        .form-container button {
+            background-color: #ff9800;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            font-size: 1.2em;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .form-container button:hover {
+            background-color: #e68900;
+        }
     </style>
 </head>
 <body>
@@ -72,5 +98,41 @@
         <p>Оптовая продажа пива и напитков</p>
         <a href="#contact" class="cta">Оставить заявку</a>
     </header>
+    
+    <div class="container">
+        <h2>Наш ассортимент</h2>
+        <div class="products">
+            <div class="product">
+                <h3>Пиво Импорт</h3>
+                <p>Лучшие сорта пива из Европы</p>
+            </div>
+            <div class="product">
+                <h3>Пиво РФ</h3>
+                <p>Популярные отечественные марки</p>
+            </div>
+            <div class="product">
+                <h3>Соки и воды</h3>
+                <p>Широкий выбор безалкогольных напитков</p>
+            </div>
+            <div class="product">
+                <h3>Закуски</h3>
+                <p>Снеки и бакалея для идеального перекуса</p>
+            </div>
+        </div>
+    </div>
+    
+    <div id="contact" class="contact">
+        <h2>Свяжитесь с нами</h2>
+        <p>Оставьте заявку, и мы свяжемся с вами!</p>
+        <div class="form-container">
+            <form>
+                <input type="text" name="name" placeholder="Ваше имя" required>
+                <input type="email" name="email" placeholder="Ваш email" required>
+                <textarea name="message" placeholder="Ваше сообщение" rows="4" required></textarea>
+                <button type="submit">Отправить заявку</button>
+            </form>
+        </div>
+        <p>Email: info@inezybeer.ru | Телефон: +7 999 123-45-67</p>
+    </div>
 </body>
-</html>
+
