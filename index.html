@@ -1,4 +1,4 @@
-</html><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
@@ -62,33 +62,43 @@
             color: white;
             margin-top: 20px;
         }
-        .form-container {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            text-align: center;
+        .social-buttons {
             margin-top: 20px;
         }
-        .form-container input, .form-container textarea {
-            width: 80%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 1em;
-        }
-        .form-container button {
-            background-color: #ff9800;
-            color: white;
+        .social-buttons a {
+            display: inline-block;
+            margin: 10px;
             padding: 10px 20px;
-            border: none;
-            font-size: 1.2em;
-            cursor: pointer;
+            color: white;
             border-radius: 5px;
+            text-decoration: none;
+            font-size: 1.2em;
         }
-        .form-container button:hover {
-            background-color: #e68900;
+        .whatsapp {
+            background-color: #25D366;
+        }
+        .telegram {
+            background-color: #0088cc;
+        }
+        @media (max-width: 768px) {
+            header {
+                font-size: 1.5em;
+                padding: 40px 15px;
+            }
+            .container {
+                width: 95%;
+                padding: 15px;
+            }
+            .products {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            }
+            .product {
+                padding: 10px;
+            }
+            .social-buttons a {
+                font-size: 1em;
+                padding: 8px 15px;
+            }
         }
     </style>
 </head>
@@ -124,15 +134,11 @@
     <div id="contact" class="contact">
         <h2>Свяжитесь с нами</h2>
         <p>Оставьте заявку, и мы свяжемся с вами!</p>
-        <div class="form-container">
-            <form>
-                <input type="text" name="name" placeholder="Ваше имя" required>
-                <input type="email" name="email" placeholder="Ваш email" required>
-                <textarea name="message" placeholder="Ваше сообщение" rows="4" required></textarea>
-                <button type="submit">Отправить заявку</button>
-            </form>
-        </div>
         <p>Email: info@inezybeer.ru | Телефон: +7 999 123-45-67</p>
+        <div class="social-buttons">
+            <a href="https://wa.me/79991234567" class="whatsapp">WhatsApp</a>
+            <a href="https://t.me/inezybeer" class="telegram">Telegram</a>
+        </div>
     </div>
 </body>
-
+</html>
